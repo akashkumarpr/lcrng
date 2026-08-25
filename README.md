@@ -1,27 +1,21 @@
-============================
-lcrng v0.1.0
-============================
-
+# lcrng
 A lightweight, Linear Congruential Generator (LCG) Pseudo-Random number generator (PRNG) built for learning using ZIG 0.16.0 .
 
-Features
-----------------------------
+### Features
 * Safe-Range Bound: Automatic Minimum/Maximum handling using built-in std @min, @max functions.
 * Overflow-Safe: Uses wrapping arithmetic opertaions (+%, *%) to avoid integer overflow in debug builds.
 
-Installation
-----------------------------
+### Installation
 Fetch and save "lcrng" as a dependency in your project's 'build.zig.zon'
 
-```
+bash```
 $ zig fetch --save https://github.com/akashkumarpr/lcrng/archive/refs/tags/v0.1.0.tar.gz
 ```
 
-Project Setup
------------------------------
+### Project Setup
 1. Configure build.zig
 
-```
+zig``` 
 //! Import the module from the dependency and attach it to your executable target
 const std = @import("std");
 
@@ -53,7 +47,7 @@ pub fn build(b: *std.Build) void {
 
 2. Code Example (src/main.zig)
 
-```
+zig```
 const std = @import("std");
 const lcrng = @import("lcrng");
 
@@ -82,8 +76,7 @@ pub fn main(init: std.process.Init) !void {
 }
 ```
 
-API Reference
-----------------------------
+### API Reference
 * ` LCG.init(seed: u64) LCG `
 Constructs a new LCG instance seeded with the provided 64-bit integer.
 * ` randNext(self: *LCG) u64 `
@@ -91,6 +84,5 @@ Updates the internal state using LCG multiplier parameters and outputs the next 
 * ` randRange(self: *LCG, minimum: u64, maximum: u64) u64 `
 Returns a pseudo-random integer within the inclusive range [min, max]. Automatically resolves cases where minimum > maximum.
 
-License
------------------------------
-MIT
+### License
+MIT (LICENSE)
