@@ -85,4 +85,4 @@ Updates the internal state using LCG multiplier parameters and outputs the next 
 Returns a pseudo-random integer within the inclusive range [min, max]. Automatically resolves cases where minimum > maximum.
 
 ### License
-MIT (LICENSE)
+MIT [LICENSE]
