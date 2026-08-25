@@ -8,14 +8,14 @@ A lightweight, Linear Congruential Generator (LCG) Pseudo-Random number generato
 ### Installation
 Fetch and save "lcrng" as a dependency in your project's 'build.zig.zon'
 
-bash```
+```bash
 $ zig fetch --save https://github.com/akashkumarpr/lcrng/archive/refs/tags/v0.1.0.tar.gz
 ```
 
 ### Project Setup
 1. Configure build.zig
 
-zig``` 
+```zig 
 //! Import the module from the dependency and attach it to your executable target
 const std = @import("std");
 
@@ -47,7 +47,7 @@ pub fn build(b: *std.Build) void {
 
 2. Code Example (src/main.zig)
 
-zig```
+```zig
 const std = @import("std");
 const lcrng = @import("lcrng");
 
